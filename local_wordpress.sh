@@ -29,10 +29,8 @@ vagrant ssh -c 'sudo mysql -u root -proot -e "drop schema wordpress"'
 vagrant ssh -c 'sudo mysql -u root -proot -e "create schema wordpress"'
 vagrant ssh -c 'cd /var/www && wp core config --dbname=wordpress --dbuser=root --dbpass=root'
 
-echo "... Installing WordPrss"
+echo "... Installing WordPress"
 vagrant ssh -c 'cd /var/www && wp core install --url=http://wordpress.local --title=wordpress --admin_user=wordpress --admin_password=wordpress --admin_email=wordpress@wordpress.local'
-
-
 
 echo "... Adding IP to hosts & wordpress.local"
 sudo echo "10.20.30.40 wordpress.local" | sudo tee -a /etc/hosts
