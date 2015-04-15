@@ -11,7 +11,7 @@ mkdir local_wordpress
 cd local_wordpress
 
 echo "... Getting (fresh) Vagrant box"
-git clone https://github.com/louisnorthmore/vagrant-debian-web.git vagrant
+git clone https://github.com/louisnorthmore/vagrant.git vagrant
 
 echo "... Starting Vagrant instance"
 cd vagrant
@@ -33,7 +33,7 @@ echo "... Installing WordPress"
 vagrant ssh -c 'cd /var/www && wp core install --url=http://wordpress.local --title=wordpress --admin_user=wordpress --admin_password=wordpress --admin_email=wordpress@wordpress.local'
 
 echo "... Adding IP to hosts & wordpress.local"
-sudo echo "10.20.30.40 wordpress.local" | sudo tee -a /etc/hosts
+sudo echo "10.20.48.40 wordpress.local" | sudo tee -a /etc/hosts
 
 echo "Launching browser"
 open "http://wordpress.local/"
