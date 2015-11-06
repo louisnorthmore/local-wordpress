@@ -11,7 +11,7 @@ mkdir local_wordpress
 cd local_wordpress
 
 echo "... Getting (fresh) Vagrant box"
-git clone https://github.com/louisnorthmore/vagrant.git vagrant
+git clone https://github.com/louisnorthmore/vagrant.git wordpress
 
 echo "... Starting Vagrant instance"
 cd vagrant
